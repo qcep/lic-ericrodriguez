@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lic. en Derecho (UVM) con experiencia en cumplimiento normativo, revisión de contratos y análisis de datos. Disponible para despachos profesionales o áreas legales corporativas.">
+    <title>Eric Rodriguez - Estudiante de Derecho | Compliance & Legal Tech</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,700&family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <style>
+        /* =========================================
+           AJUSTES PARA FONDO OSCURO EN PROYECTOS
+           ========================================= */
+        #projects {
+            position: relative;
+            background-color: #050914;
+            overflow: hidden; 
+        }
+        #projects-3d-canvas {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 0; pointer-events: none;
+        }
+        #projects .container { position: relative; z-index: 1; }
+        #projects::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(10, 22, 40, 0.7); z-index: 0;
+        }
+        #projects .section-title { color: #FFFFFF; }
+        #projects .section-subtitle { color: #CED4DA; }
+        #projects .filter-btn {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #FFFFFF;
+        }
+        #projects .filter-btn:hover { border-color: var(--secondary); color: var(--secondary); }
+        #projects .filter-btn.active { background: var(--gradient-secondary); color: var(--primary); border-color: var(--secondary); }
+
+        /* =========================================
+           AJUSTES PARA FONDO OSCURO EN CERTIFICACIONES
+           ========================================= */
+        #certifications {
+            position: relative; background-color: #050914; overflow: hidden; 
+        }
+        #certifications-3d-canvas {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 0; pointer-events: none;
+        }
+        #certifications .container { position: relative; z-index: 1; }
+        #certifications::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(10, 22, 40, 0.7); z-index: 0;
+        }
+        #certifications .section-title { color: #FFFFFF; }
+        #certifications .section-subtitle { color: #CED4DA; }
+    </style>
+</head>
+<body>
+    <!-- ==================== PRELOADER ==================== -->
+    <div id="preloader">
+        <div class="loader-container">
+            <div class="loader-ring"></div>
+            <div class="loader-text">Cargando...</div>
+        </div>
+    </div>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav id="navbar" class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="nav-logo">
+                    <a href="#hero">
+                        <img src="logo.svg" alt="Logo" class="logo-img">
+                        <span class="logo-text">    </span>
+                    </a>
+                </div>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#hero" class="nav-link active">Inicio</a></li>
+                    <li><a href="#about" class="nav-link">Sobre Mí</a></li>
+                    <li><a href="#services" class="nav-link">Servicios</a></li>
+                    <li><a href="#expertise" class="nav-link">Áreas de Práctica</a></li>
+                    <li><a href="#projects" class="nav-link">Casos y Proyectos</a></li>
+                    <li><a href="#certifications" class="nav-link">Certificaciones</a></li>
+                    <li><a href="#testimonials" class="nav-link">Testimonios</a></li>
+                    <li><a href="#contact" class="nav-link">Contacto</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <a href="#contact" class="btn btn-primary btn-sm">Contactar</a>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="hero" class="hero">
+        <div id="particles-js" class="hero-particles"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge animate__animated animate__fadeInDown">
+                    <span class="badge-dot"></span>
+                    Disponible 
+                </div>
+                
+                <h1 class="hero-title animate__animated animate__fadeInUp">
+                    <span class="hero-greeting">Hola, soy</span>
+                    <span class="hero-name">Eric Rodriguez</span>
+                    <span class="hero-role">
+                        <span class="typed-text" id="typed-text"></span>
+                    </span>
+                </h1>
+                
+                <p class="hero-description animate__animated animate__fadeInUp animate__delay-1s">
+                    Estudiante de Derecho (UVM) con experiencia en Compliance, Revisión de Contratos y Análisis Legal.<br>
+                    Inglés Avanzado (B2) | Visa & ETA OK
+                </p>
+                
+                <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-2s">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-briefcase"></i> Ver Casos
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-paper-plane"></i> Contáctame
+                    </a>
+                </div>
+                
+                <div class="hero-stats animate__animated animate__fadeInUp animate__delay-3s">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="2">0</span>
+                        <span class="stat-label">Años de Experiencia Laboral</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="10">0</span>
+                        <span class="stat-label">Certificaciones Legales</span>
+                        <span class="stat-plus">+</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="1">0</span>
+                        <span class="stat-label">Licenciatura en Curso</span>
+                    </div>
+                </div>
+                
+                <div class="hero-social animate__animated animate__fadeInUp animate__delay-3s">
+                    <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="hero-visual animate__animated animate__fadeInRight animate__delay-1s">
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-glow"></div>
+                    <img src="profile-photo.png" alt="Eric Rodriguez" class="hero-image">
+                    <div class="hero-image-badge">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Disponible</span>
+                    </div>
+                </div>
+                
+                <div class="floating-card card-1">
+                    <i class="fas fa-balance-scale"></i>
+                    <span>Derecho Civil</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-file-signature"></i>
+                    <span>Contratos</span>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fas fa-building"></i>
+                    <span>Corporativo</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <a href="#about" class="scroll-link">
+                <span class="scroll-text">Scroll</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Sobre Mí</span>
+                <h2 class="section-title">Derecho & <span class="highlight">Visión de Negocio</span></h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">
+                    Combinando el rigor legal con la experiencia operativa en la industria
+                </p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="about-main">
+                            Soy estudiante de <strong>Derecho (UVM)</strong> con experiencia previa en análisis de datos, 
+                            revisión de contratos y cumplimiento normativo en empresas de construcción en EE. UU. y Canadá.
+                        </p>
+                        <p>
+                            Me interesa incorporarme como aprendiz o practicante en un despacho o área legal interna para 
+                            apoyar en investigación jurídica, organización documental y cumplimiento legal. Aporto experiencia 
+                            laboral real, orden y capacidad analítica para resolver problemas complejos.
+                        </p>
+                    </div>
+                    
+                    <div class="about-info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Educación</h4>
+                                <p>Lic. en Derecho (UVM) - En Curso</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-language"></i>
+                            <div>
+                                <h4>Idiomas</h4>
+                                <p>Español (Nativo) · Inglés (B2 Certificado)</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-pin"></i>
+                            <div>
+                                <h4>Ubicación</h4>
+                                <p>Galeana, Nuevo León, México</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-passport"></i>
+                            <div>
+                                <h4>Estatus</h4>
+                                <p>Visa OK · ETA OK</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-cta">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-download"></i> Descargar CV Legal
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fas fa-envelope"></i> Contáctame
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="about-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Estudiante de Derecho</h4>
+                            <p class="timeline-date">Abril 2025 - Presente</p>
+                            <p>Universidad del Valle de México (UVM)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Compliance & Análisis de Datos</h4>
+                            <p class="timeline-date">2023 - 2024</p>
+                            <p>AG Builders, Chicago. Revisión de contratos y normativas OSHA.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Estimador de Costos</h4>
+                            <p class="timeline-date">2022</p>
+                            <p>Goliath Roofing, Ontario. Cuantificación de recursos y planeación.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section id="services" class="services section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Servicios</span>
+                <h2 class="section-title">Áreas de <span class="highlight">Apoyo Legal</span></h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">
+                    Habilidades y servicios enfocados en el sector legal y corporativo
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Revisión de Contratos</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Análisis de cláusulas y obligaciones</li>
+                        <li><i class="fas fa-check"></i> Verificación de documentación soporte</li>
+                        <li><i class="fas fa-check"></i> Contratos con proveedores y clientes</li>
+                        <li><i class="fas fa-check"></i> Identificación de riesgos legales</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3>Cumplimiento Normativo</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Seguimiento de regulaciones (OSHA)</li>
+                        <li><i class="fas fa-check"></i> Protocolos de seguridad e higiene</li>
+                        <li><i class="fas fa-check"></i> Auditorías internas de cumplimiento</li>
+                        <li><i class="fas fa-check"></i> Gobierno Corporativo</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+                    <h3>Gestión Documental</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Organización de expedientes</li>
+                        <li><i class="fas fa-check"></i> Investigación jurídica</li>
+                        <li><i class="fas fa-check"></i> Elaboración de escritos y reportes</li>
+                        <li><i class="fas fa-check"></i> Automatización de tareas legales</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EXPERTISE SECTION ==================== -->
+    <section id="expertise" class="expertise section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Áreas de Práctica</span>
+                <h2 class="section-title">Intereses & <span class="highlight">Especialización</span></h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">
+                    Áreas del derecho en las que deseo desarrollarme profesionalmente
+                </p>
+            </div>
+            
+            <div class="expertise-tabs">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="civil">
+                        <i class="fas fa-balance-scale"></i> Civil
+                    </button>
+                    <button class="tab-btn" data-tab="corporativo">
+                        <i class="fas fa-building"></i> Corporativo
+                    </button>
+                    <button class="tab-btn" data-tab="mercantil">
+                        <i class="fas fa-handshake"></i> Mercantil
+                    </button>
+                    <button class="tab-btn" data-tab="penal">
+                        <i class="fas fa-gavel"></i> Penal
+                    </button>
+                </div>
+                
+                <div class="tabs-content">
+                    <div class="tab-panel active" id="tab-civil">
+                        <div class="tech-grid">
+                            <div class="tech-item"><img src="icon-derecho-civil.png" alt="Contratos"><span>Contratos Civiles</span></div>
+                            <div class="tech-item"><img src="icon-derecho-familia.png" alt="Familia"><span>Derecho Familiar</span></div>
+                            <div class="tech-item"><img src="icon-derecho-inmobiliario.png" alt="Inmobiliario"><span>Inmobiliario</span></div>
+                            <div class="tech-item"><img src="icon-derecho-obligaciones.png" alt="Obligaciones"><span>Obligaciones</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="tab-corporativo">
+                        <div class="tech-grid">
+                            <div class="tech-item"><img src="icon-gobierno-corp.png" alt="Gobierno Corp"><span>Gobierno Corp.</span></div>
+                            <div class="tech-item"><img src="icon-fusiones.png" alt="Fusiones"><span>Fusiones</span></div>
+                            <div class="tech-item"><img src="icon-compliance.png" alt="Compliance"><span>Compliance</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="tab-mercantil">
+                        <div class="tech-grid">
+                            <div class="tech-item"><img src="icon-titulos.png" alt="Títulos"><span>Títulos de Crédito</span></div>
+                            <div class="tech-item"><img src="icon-contratos-merc.png" alt="Contratos Merc"><span>Contratos Merc.</span></div>
+                            <div class="tech-item"><img src="icon-propiedad.png" alt="Propiedad"><span>Propiedad Intelectual</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="tab-penal">
+                        <div class="tech-grid">
+                            <div class="tech-item"><img src="icon-litigio.png" alt="Litigio"><span>Litigio Penal</span></div>
+                            <div class="tech-item"><img src="icon-amparo.png" alt="Amparo"><span>Amparo</span></div>
+                            <div class="tech-item"><img src="icon-delitos.png" alt="Delitos"><span>Delitos Patrimoniales</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section id="projects" class="projects section-padding">
+        <div id="projects-3d-canvas"></div>
+
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portafolio Legal</span>
+                <h2 class="section-title">Casos y <span class="highlight">Proyectos</span></h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">
+                    Experiencia práctica y simulaciones de casos legales
+                </p>
+            </div>
+            
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="compliance">Compliance</button>
+                <button class="filter-btn" data-filter="contratos">Contratos</button>
+                <button class="filter-btn" data-filter="investigacion">Investigación</button>
+            </div>
+            
+            <div class="projects-grid">
+                
+                <!-- PROYECTO 1: COMPLIANCE -->
+                <div class="project-card" data-category="compliance">
+                    <div class="project-image">
+                        <img src="img-compliance-osha.png" alt="Auditoría de Cumplimiento OSHA">
+                        <div class="project-overlay">
+                            <a href="#" target="_blank" class="project-link"><i class="fas fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Compliance</span>
+                        <h3>Auditoría de Cumplimiento Normativo (OSHA)</h3>
+                        <p>Implementación de protocolos de seguridad e higiene y revisión de estándares federales en EE. UU.</p>
+                        <div class="project-tech">
+                            <span>OSHA</span><span>Auditoría</span><span>Risk Management</span>
+                        </div>
+                    </div>
+                </div>
+       
+                <!-- PROYECTO 2: CONTRATOS -->
+                <div class="project-card" data-category="contratos">
+                    <div class="project-image">
+                        <img src="img-revision-contratos.png" alt="Revisión de Contratos">
+                        <div class="project-overlay">
+                            <a href="#" target="_blank" class="project-link"><i class="fas fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Contratos</span>
+                        <h3>Análisis y Revisión de Contratos de Construcción</h3>
+                        <p>Verificación de obligaciones, alcances y documentación soporte en contratos con proveedores y clientes.</p>
+                        <div class="project-tech">
+                            <span>Contratos</span><span>Cláusulas</span><span>Negociación</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 3: INVESTIGACIÓN -->
+                <div class="project-card" data-category="investigacion">
+                    <div class="project-image">
+                        <img src="img-investigacion-juridica.png" alt="Investigación Jurídica">
+                        <div class="project-overlay">
+                            <a href="#" target="_blank" class="project-link"><i class="fas fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Investigación</span>
+                        <h3>Automatización de Tareas Legales</h3>
+                        <p>Uso de herramientas digitales para reducir trabajo manual en la organización de expedientes y escritos.</p>
+                        <div class="project-tech">
+                            <span>Legal Tech</span><span>Automatización</span><span>Gestión</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 4: COMPLIANCE -->
+                <div class="project-card" data-category="compliance">
+                    <div class="project-image">
+                        <img src="img-gobierno-corporativo.png" alt="Gobierno Corporativo">
+                        <div class="project-overlay">
+                            <a href="#" target="_blank" class="project-link"><i class="fas fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Compliance</span>
+                        <h3>Marco de Gobierno Corporativo</h3>
+                        <p>Estudio y aplicación de principios de gobierno corporativo y regulación en entornos empresariales.</p>
+                        <div class="project-tech">
+                            <span>Gobierno Corp.</span><span>Regulación</span><span>Ética</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 5: INVESTIGACIÓN -->
+                <div class="project-card" data-category="investigacion">
+                    <div class="project-image">
+                        <img src="img-derecho-tecnologia.png" alt="Derecho y Tecnología">
+                        <div class="project-overlay">
+                            <a href="#" target="_blank" class="project-link"><i class="fas fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Investigación</span>
+                        <h3>Cloud Computing Law & Privacidad</h3>
+                        <p>Análisis de marcos regulatorios de protección de datos y computación en la nube.</p>
+                        <div class="project-tech">
+                            <span>Privacidad</span><span>Cloud Law</span><span>Data Protection</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 6: CONTRATOS -->
+                <div class="project-card" data-category="contratos">
+                    <div class="project-image">
+                        <img src="img-negociacion.png" alt="Negociación Estratégica">
+                        <div class="project-overlay">
+                            <a href="#" target="_blank" class="project-link"><i class="fas fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Contratos</span>
+                        <h3>Negociación de Contratos y Acuerdos</h3>
+                        <p>Aplicación de técnicas de negociación exitosa para la resolución de conflictos contractuales.</p>
+                        <div class="project-tech">
+                            <span>Negociación</span><span>Acuerdos</span><span>Mediación</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="projects-cta">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-folder"></i> Ver Expedientes Completos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CERTIFICATIONS SECTION ==================== -->
+    <section id="certifications" class="certifications section-padding">
+        <div id="certifications-3d-canvas"></div>
+
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Certificaciones</span>
+                <h2 class="section-title">Formación & <span class="highlight">Acreditaciones</span></h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">
+                    Compromiso con la excelencia y el aprendizaje continuo en el ámbito legal
+                </p>
+            </div>
+            
+            <div class="certifications-grid">
+                <!-- 1. Regulatory Compliance (Penn) -->
+                <a href="#" target="_blank" class="cert-card" style="text-decoration: none;">
+                    <div class="cert-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Regulatory Compliance</h4>
+                    <p>University of Pennsylvania</p>
+                    <span class="cert-year">Certificación</span>
+                </a>
+
+                <!-- 2. Gobierno Corporativo (Penn) -->
+                <a href="#" target="_blank" class="cert-card" style="text-decoration: none;">
+                    <div class="cert-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h4>Gobierno Corporativo</h4>
+                    <p>University of Pennsylvania</p>
+                    <span class="cert-year">Certificación</span>
+                </a>
+
+                <!-- 3. Healthcare Law (Penn) -->
+                <a href="#" target="_blank" class="cert-card" style="text-decoration: none;">
+                    <div class="cert-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h4>Healthcare Law</h4>
+                    <p>University of Pennsylvania</p>
+                    <span class="cert-year">Certificación</span>
+                </a>
+
+                <!-- 4. AI for Lawyers (Michigan) -->
+                <a href="#" target="_blank" class="cert-card" style="text-decoration: none;">
+                    <div class="cert-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h4>AI for Lawyers and Other Advocates</h4>
+                    <p>University of Michigan</p>
+                    <span class="cert-year">Certificación</span>
+                </a>
+
+                <!-- 5. Business Law -->
+                <a href="#" target="_blank" class="cert-card" style="text-decoration: none;">
+                    <div class="cert-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h4>Business Law</h4>
+                    <p>Coursera</p>
+                    <span class="cert-year">Certificación</span>
+                </a>
+
+                <!-- 6. Cloud Computing Law -->
+                <a href="#" target="_blank" class="cert-card" style="text-decoration: none;">
+                    <div class="cert-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h4>Cloud Computing Law</h4>
+                    <p>Coursera</p>
+                    <span class="cert-year">Certificación</span>
+                </a>
+
+                <!-- 7. Successful Negotiation (Michigan) -->
+                <a href="#" target="_blank" class="cert-card" style="text-decoration: none;">
+                    <div class="cert-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4>Successful Negotiation</h4>
+                    <p>University of Michigan</p>
+                    <span class="cert-year">Certificación</span>
+                </a>
+
+                <!-- 8. Privacy Fundamentals -->
+                <a href="#" target="_blank" class="cert-card" style="text-decoration: none;">
+                    <div class="cert-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h4>Privacy Fundamentals</h4>
+                    <p>INFOSEC</p>
+                    <span class="cert-year">Certificación</span>
+                </a>
+
+                <!-- 9. Inglés B2 (British Council) -->
+                <a href="#" target="_blank" class="cert-card" style="text-decoration: none;">
+                    <div class="cert-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h4>English Online Self Study - B2</h4>
+                    <p>British Council</p>
+                    <span class="cert-year">Certificación</span>
+                </a>
+
+                <!-- 10. Soldadura y Refrigeración (SEP) -->
+                <a href="#" target="_blank" class="cert-card" style="text-decoration: none;">
+                    <div class="cert-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h4>Soldadura SMAW / Refrigeración</h4>
+                    <p>SEP / ICET</p>
+                    <span class="cert-year">Diploma</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS SECTION ==================== -->
+    <section id="testimonials" class="testimonials section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Testimonios</span>
+                <h2 class="section-title">Lo Que Dicen <span class="highlight">De Mi Trabajo</span></h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">
+                    Experiencias de quienes han confiado en mi capacidad analítica y organización
+                </p>
+            </div>
+            
+            <div class="swiper testimonials-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                "David demostró una habilidad excepcional para revisar contratos complejos y asegurar el cumplimiento normativo. Su atención al detalle y su capacidad para organizar documentación legal fueron fundamentales para nuestros proyectos."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <span>JD</span>
+                                </div>
+                                <div class="author-info">
+                                    <h4>Juan Delgado</h4>
+                                    <p>Director, AG Builders</p>
+                                </div>
+                            </div>
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                "Su capacidad para automatizar procesos administrativos y mantener el orden en la documentación nos ahorró incontables horas de trabajo. Un profesional con una visión muy completa del negocio y del derecho."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <span>MR</span>
+                                </div>
+                                <div class="author-info">
+                                    <h4>María Rodríguez</h4>
+                                    <p>Gerente de Operaciones, Goliath Roofing</p>
+                                </div>
+                            </div>
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Contacto</span>
+                <h2 class="section-title">Hablemos de tu <span class="highlight">Proyecto Legal</span></h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">
+                    ¿Buscas un practicante o aprendiz con experiencia real? Contáctame
+                </p>
+            </div>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Email</h4>
+                        <p>david.rx750@gmail.com</p>
+                        <a href="mailto:david.rx750@gmail.com">Enviar mensaje</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>Teléfono</h4>
+                        <p>+52 812 406 2292</p>
+                        <a href="tel:+528124062292">Llamar ahora</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Ubicación</h4>
+                        <p>Galeana, Nuevo León, México</p>
+                        <a href="#" target="_blank">Ver en mapa</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h4>Disponibilidad</h4>
+                        <p>Lun - Vie: 9:00 - 18:00</p>
+                        <span class="available-badge">Disponible</span>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre completo</label>
+                            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <input type="text" id="subject" name="subject" placeholder="¿Sobre qué quieres hablar?">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Cuéntame sobre la oportunidad..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i> Enviar mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo.svg" alt="Logo" class="footer-logo">
+                    <h3>Eric Rodriguez</h3>
+                    <p>Lic. en Derecho</p>
+                    <div class="footer-social">
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="#about">Sobre Mí</a></li>
+                        <li><a href="#services">Servicios</a></li>
+                        <li><a href="#projects">Casos</a></li>
+                        <li><a href="#certifications">Certificaciones</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Conéctate</h4>
+                    <p>Recibe actualizaciones sobre mis avances en el ámbito legal</p>
+                    <form id="newsletterForm" class="newsletter-form">
+                        <input type="email" placeholder="Tu email" required>
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Eric Rodriguez. Todos los derechos reservados.</p>
+                <p>Diseñado por EDRF con visión legal</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== BACK TO TOP ==================== -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- 3D Logic (Mismo código que tenías) -->
+    <script>
+        function init3D(containerId) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+
+            let width = container.clientWidth;
+            let height = container.clientHeight;
+
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            
+            renderer.setSize(width, height);
+            renderer.setPixelRatio(window.devicePixelRatio);
+            container.appendChild(renderer.domElement);
+
+            const geometry = new THREE.BoxGeometry(2.5, 2.5, 2.5);
+            const material = new THREE.MeshBasicMaterial({ color: 0x00ffcc, wireframe: true, transparent: true, opacity: 0.15 });
+            const cube = new THREE.Mesh(geometry, material);
+            scene.add(cube);
+
+            const cube2 = new THREE.Mesh(new THREE.BoxGeometry(4, 4, 4), new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true, transparent: true, opacity: 0.05 }));
+            scene.add(cube2);
+
+            const particlesGeo = new THREE.BufferGeometry();
+            const particlesCount = 700;
+            const posArray = new Float32Array(particlesCount * 3);
+            
+            for(let i = 0; i < particlesCount * 3; i++) {
+                posArray[i] = (Math.random() - 0.5) * 20;
+            }
+            
+            particlesGeo.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+            const particlesMat = new THREE.PointsMaterial({ size: 0.05, color: 0x00ffcc, transparent: true, opacity: 0.6 });
+            const particles = new THREE.Points(particlesGeo, particlesMat);
+            scene.add(particles);
+
+            camera.position.z = 5;
+
+            let mouseX = 0;
+            let mouseY = 0;
+            let targetX = 0;
+            let targetY = 0;
+
+            container.addEventListener('mousemove', (event) => {
+                const rect = container.getBoundingClientRect();
+                mouseX = event.clientX - rect.left - (rect.width / 2);
+                mouseY = event.clientY - rect.top - (rect.height / 2);
+            });
+
+            function animate3D() {
+                requestAnimationFrame(animate3D);
+                targetX = mouseX * 0.001;
+                targetY = mouseY * 0.001;
+                cube.rotation.x += 0.005;
+                cube.rotation.y += 0.01;
+                cube2.rotation.x -= 0.002;
+                cube2.rotation.y -= 0.005;
+                particles.rotation.y += 0.001;
+                cube.rotation.y += 0.05 * (targetX - cube.rotation.y);
+                cube.rotation.x += 0.05 * (targetY - cube.rotation.x);
+                renderer.render(scene, camera);
+            }
+            animate3D();
+
+            const resizeObserver = new ResizeObserver(entries => {
+                for (let entry of entries) {
+                    const { width, height } = entry.contentRect;
+                    camera.aspect = width / height;
+                    camera.updateProjectionMatrix();
+                    renderer.setSize(width, height);
+                }
+            });
+            resizeObserver.observe(container);
+        }
+
+        init3D('projects-3d-canvas');
+        init3D('certifications-3d-canvas');
+    </script>
+</body>
+</html>
