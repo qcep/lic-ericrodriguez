@@ -731,19 +731,37 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-1 {
     top: 20px;
-    right: -20px;
+    left: -50px;
     animation-delay: 0s;
 }
 
 .card-2 {
-    bottom: 60px;
-    left: -30px;
-    animation-delay: 2s;
+    top: 110px;
+    right: -45px;
+    animation-delay: 1.5s;
 }
 
 .card-3 {
-    bottom: 120px;
-    right: -10px;
+    top: 220px;
+    left: -40px;
+    animation-delay: 3s;
+}
+
+.card-4 {
+    bottom: 160px;
+    right: -50px;
+    animation-delay: 0.8s;
+}
+
+.card-5 {
+    bottom: 60px;
+    left: -30px;
+    animation-delay: 2.5s;
+}
+
+.card-6 {
+    bottom: 20px;
+    right: -20px;
     animation-delay: 4s;
 }
 
